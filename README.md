@@ -13,7 +13,7 @@ This is the course project of [Getting and Cleaning Data.](https://www.coursera.
 This data set captures 3-axial linear acceleration and 3-axial angular velocity at 50 Hz with labeled with human activities, which are WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING and LAYING.
 
 ===========================================
-### Processed steps
+### Processed steps in R scripts
 I use R programming language to create this tidy data set. 
 My processed stpes meet the course project requirement including:
 * 1. Merges the training and the test sets to create one data set.
@@ -21,6 +21,8 @@ My processed stpes meet the course project requirement including:
 * 3. Uses descriptive activity names to name the activities in the data set
 * 4. Appropriately labels the data set with descriptive variable names. 
 * 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+My R script is based on above steps. There are more detailed command in R file to explain my every step.
 
 ===========================================
 ### This repo includes the following files
@@ -30,11 +32,13 @@ My processed stpes meet the course project requirement including:
 * tidy_data_set : my created tidy data set
 
 ===========================================
-### Reproduce stpes
+### Reproduce tidy dataset stpes
 * 1. Download the original Human Activity Recognition data folder from [UCI HAR Dataset.zip] (http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip)
 * 2. unzip "UCI HAR Dataset.zip" to appropriate directory
 * 3. place run_analysis.R in "UCI HAR Dataset" folder
 * 4. run run_analysis.R steps by steps to see what happend
 * 5. reproduce the "tidy_data_set.txt" file
+
+You shold carefully set the appropriate directory. You can check run_analysis.R. The setwd() and read.table()'s path to understand how it works.
 
 
