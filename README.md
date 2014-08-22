@@ -26,10 +26,10 @@ My R script is based on above steps. There are more detailed command in R file t
 
 ===========================================
 ### This repo includes the following files
-* README.md
-* run_analysis.R : main script to process original data and create final tidy data set
-* CodeBook.md : describes the variables and data
-* tidy_data_set : my created tidy data set
+* [README.md](https://github.com/autekroy/Tidy-Data-Set-of-Human-Activity-Recognition/blob/master/README.md)
+* [run_analysis.R](https://github.com/autekroy/Tidy-Data-Set-of-Human-Activity-Recognition/blob/master/run_analysis.R) : main script to process original data and create final tidy data set
+* [CodeBook.md](https://github.com/autekroy/Tidy-Data-Set-of-Human-Activity-Recognition/blob/master/CodeBook.md) : describes the variables and data
+* [tidy_data_set](https://github.com/autekroy/Tidy-Data-Set-of-Human-Activity-Recognition/blob/master/tidy_data_set.txt) : my created tidy data set
 
 ===========================================
 ### Reproduce tidy dataset stpes
