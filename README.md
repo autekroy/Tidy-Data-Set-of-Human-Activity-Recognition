@@ -8,12 +8,12 @@ Tidy-Data-Set-of-Human-Activity-Recognition
 
 ===========================================
 ### Background and Source
-This is the course project of [Getting and Cleaning Data.](https://www.coursera.org/course/getdata) (Provided from John Hopkins University in Coursera) I use the [Human Activity Recognition Using Smartphones Data Set] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) to create a tidy data set for future analysis.
+This is the course project of [Getting and Cleaning Data](https://www.coursera.org/course/getdata). (Provided from John Hopkins University in Coursera) I use the [Human Activity Recognition Using Smartphones Data Set] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) to create a tidy data set for future analysis.
 
 This data set captures 3-axial linear acceleration and 3-axial angular velocity at 50 Hz with labeled with human activities, which are WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING and LAYING.
 
 ===========================================
-### Processed steps in R scripts
+### Processed steps in R scripts (project requirements)
 I use R programming language to create this tidy data set. 
 My processed stpes meet the course project requirement including:
 * 1. Merges the training and the test sets to create one data set.
