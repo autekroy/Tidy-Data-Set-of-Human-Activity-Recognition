@@ -58,6 +58,8 @@ These signals were used to estimate variables of the feature vector for each pat
 
 Last, each variable have ended on mean()(Mean value) or std()(Standard deviation) to estimate from above signals.
 
+Finally, in the tidy data set, each variable represent the **_arerage_** of all signals(each variable).
+
 ===========================================
 
 ### Notes: 
