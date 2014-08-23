@@ -4,7 +4,7 @@ Code Book for Human Activity Recognition tidy dataset
 * Author: [Yao-Jen Chang (autekwing)](https://github.com/autekroy) 
 * Email : autekwing@ucla.edu
 * Date  : 08/22/2014 @Taiwan
-* Verion: 1.0
+* Verion: 1.1
 
 ===========================================
 
@@ -58,7 +58,7 @@ These signals were used to estimate variables of the feature vector for each pat
 
 Last, each variable have ended on mean()(Mean value) or std()(Standard deviation) to estimate from above signals.
 
-Finally, in the tidy data set, each variable represent the **_arerage_** of all signals(each variable).
+Finally, in the tidy data set, each variable represent the **_arerage_** of all signals(each variable). So I have change the variable names to "aver_of_**aboveVariableName**_" to indicate average of each variable.
 
 ===========================================
 
