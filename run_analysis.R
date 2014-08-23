@@ -1,12 +1,12 @@
 # # =========================================================== #
 # Author: Yao-Jen Chang (autekwing) (https://github.com/autekroy)
 # Email : autekwing@ucla.edu
-# Date  : 08/22/2014 @Taiwan
-# Verion: 1.0
+# Date  : 08/23/2014 (Made In Taiwan)
+# Verion: 1.1
 # # =========================================================== #
 
 # set working directory if you need, the following is my computers'
-#setwd("Coursera/Getting and Cleaning Data/project/UCI HAR Dataset")
+# setwd("Coursera/Getting and Cleaning Data/project/UCI HAR Dataset")
 
 # load the data and features' name to memory
 testSet <- read.table("./test/X_test.txt")
@@ -32,12 +32,10 @@ merLabel <- rbind(testLabel, trainLabel)
 merSub   <- rbind(testSub, trainSub)
 
 
-# ===step 4. labels the data set with descriptive variable names.===
-## I do the step 4 before step 2 (extracting data)
-## because it's easier to map features' names before subsetting them.
+
+# it's easier to map features' names before subsetting them.
 # transpose the matrix from row to column
 feaName <- t(feaName)
-
 # change the merged data sets's columns' name into real features' names
 colnames(merSet) <- feaName #map the feature name to 
 
@@ -52,10 +50,18 @@ extrSet <- merSet[ c(1:6, 41:46, 81:86, 121:126, 161:166,
 merAct <- factor(merLabel[,1], labels = c("walk", "walk_upstairs", "walk_downstairs", "sit","stand", "lay"))
 merAct <- as.character(merAct) # convert factor to character vector
 merAct <- data.frame(merAct)   # conver vector to data frame
-colnames(merAct) <- "activity" # change the column's name
 
-# conbine above extracted data with activities
+# conbine above extracted data with meraged activities
 extrSet <- cbind(extrSet, merAct)
+
+# ===step 4. labels the data set with descriptive variable names.===
+#change the name to average_of_xxx for next steps
+feaName <- colnames(extrSet) 
+feaName <- lapply(feaName, function(x) paste("aver", "of", x,  sep = "_"))
+feaName[67] <- "activity" # change the activity's column name
+
+colnames(extrSet) <- feaName #map the feature name to extracted dataset
+
 
 # ===step 5. Creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject. ===
@@ -71,6 +77,6 @@ tidyData <- dcast(setMelt, activity + subject ~ variable, mean)
 # create a tidy data set file
 write.table(tidyData, file = "./tidy_data_set.txt", row.name=FALSE)
 
-# test for reading tidy set file
+# reading tidy set file to check
 # set check.names = FALSE ensures the colums names stay same in file
 newTidyData <- read.table("./tidy_data_set.txt")
